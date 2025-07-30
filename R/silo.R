@@ -1,7 +1,7 @@
 .silo_api_request <- function(path, query) {
     url <- httr2::url_parse("https://www.longpaddock.qld.gov.au")
     url$path <- path
-    url <- httr2::url_modify(url, query = query) |> 
+    url <- httr2::url_modify(url, query = query) |>
         httr2::url_build()
 
     # Build and perform request
@@ -10,7 +10,7 @@
 
     # Parse response as text (change to resp_body_json if JSON expected)
     result <- httr2::resp_body_string(resp)
-    
+
     return(result)
 }
 
@@ -37,7 +37,7 @@ silo_ppd <- function(station,
                         email,
                         start = as.Date("1889-01-01"),
                         finish = Sys.Date(),
-                        format = "apsim",
+                        format = c("apsim", "standard"),
                         outfile = NULL) {
     stopifnot(is.character(station) | is.numeric(station))
     stopifnot(length(station) == 1)
@@ -78,8 +78,8 @@ silo_ppd <- function(station,
 
 #' Retrieve Gridded Weather Data from SILO
 #'
-#' Downloads weather records from the SILO Gridded Dataset API 
-#' (\url{https://www.longpaddock.qld.gov.au/silo/api-documentation/}) 
+#' Downloads weather records from the SILO Gridded Dataset API
+#' (\url{https://www.longpaddock.qld.gov.au/silo/api-documentation/})
 #' for a specified location and date range.
 #'
 #' @param lon Numeric. Longitude of the location.
