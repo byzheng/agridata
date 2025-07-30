@@ -2,7 +2,7 @@
 % Please edit documentation in R/silo.R
 \name{silo_grid}
 \alias{silo_grid}
-\title{Get gridded data from SILO}
+\title{Retrieve Gridded Weather Data from SILO}
 \usage{
 silo_grid(
   lon,
@@ -10,31 +10,45 @@ silo_grid(
   email,
   start = as.Date("1889-01-01"),
   finish = Sys.Date(),
-  format = "apsim",
+  format = c("apsim", "standard"),
   outfile = NULL
 )
 }
 \arguments{
-\item{lon}{longitude}
+\item{lon}{Numeric. Longitude of the location.}
 
-\item{lat}{latitude}
+\item{lat}{Numeric. Latitude of the location.}
 
-\item{email}{email address}
+\item{email}{Character. Email address required for API access.}
 
-\item{start}{start date}
+\item{start}{Date or character. Start date of the data request (in "YYYY-MM-DD" format).}
 
-\item{finish}{finish date}
+\item{finish}{Date or character. End date of the data request (in "YYYY-MM-DD" format).}
 
-\item{format}{data format}
+\item{format}{Character. Data format to request from the API (e.g., "csv", "json").}
 
-\item{outfile}{output file}
+\item{outfile}{Character. Path to the output file where data will be saved.}
 }
 \value{
-No return values
+Invisibly returns \code{NULL}. The function is called for its side effect of downloading and saving the data.
 }
 \description{
-Get gridded data from SILO
+Downloads weather records from the SILO Gridded Dataset API 
+(\url{https://www.longpaddock.qld.gov.au/silo/api-documentation/}) 
+for a specified location and date range.
 }
-\details{
-Get weather record from SILO Gridded Dataset (https://www.longpaddock.qld.gov.au/silo/api-documentation/)
+\examples{
+\dontrun{
+get_silo_data(
+  lon = 151.2,
+  lat = -27.5,
+  start = "2020-01-01",
+  finish = "2020-12-31",
+  email = "user@example.com",
+  format = "csv",
+  output_format = "apsim",
+  outfile = "weather.apsim"
+)
+}
+
 }

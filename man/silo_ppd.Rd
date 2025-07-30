@@ -2,7 +2,7 @@
 % Please edit documentation in R/silo.R
 \name{silo_ppd}
 \alias{silo_ppd}
-\title{Get PPD data from SILO}
+\title{Retrieve Daily Weather Data from SILO PPD}
 \usage{
 silo_ppd(
   station,
@@ -14,24 +14,26 @@ silo_ppd(
 )
 }
 \arguments{
-\item{station}{ppd station id}
+\item{station}{Character. The SILO PPD station ID.}
 
-\item{email}{email address}
+\item{email}{Character. Email address required for API access.}
 
-\item{start}{start date}
+\item{start}{Date. The start date for data retrieval.}
 
-\item{finish}{finish date}
+\item{finish}{Date. The end date for data retrieval.}
 
-\item{format}{data format}
+\item{format}{Character. Desired data format (e.g., "csv", "json").}
 
-\item{outfile}{output file}
+\item{outfile}{Character. Path to the output file where data will be saved.}
 }
 \value{
-No return values
+Invisibly returns \code{NULL}. The function is called for its side effect of downloading and/or saving data.
 }
 \description{
-Get PPD data from SILO
+Downloads daily weather records from the SILO Patched Point Dataset (PPD) using the SILO API.
 }
 \details{
-Get weather record from SILO PPD (https://www.longpaddock.qld.gov.au/silo/api-documentation/)
+This function accesses the SILO PPD service (see \url{https://www.longpaddock.qld.gov.au/silo/api-documentation/})
+ to retrieve weather data for a specified station and date range. The data can be returned in various formats and
+ optionally saved to a file.
 }
