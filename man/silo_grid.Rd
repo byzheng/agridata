@@ -33,8 +33,8 @@ silo_grid(
 Invisibly returns \code{NULL}. The function is called for its side effect of downloading and saving the data.
 }
 \description{
-Downloads weather records from the SILO Gridded Dataset API 
-(\url{https://www.longpaddock.qld.gov.au/silo/api-documentation/}) 
+Downloads weather records from the SILO Gridded Dataset API
+(\url{https://www.longpaddock.qld.gov.au/silo/api-documentation/})
 for a specified location and date range.
 }
 \examples{

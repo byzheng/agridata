@@ -9,7 +9,7 @@ silo_ppd(
   email,
   start = as.Date("1889-01-01"),
   finish = Sys.Date(),
-  format = "apsim",
+  format = c("apsim", "standard"),
   outfile = NULL
 )
 }
