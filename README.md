@@ -1,7 +1,6 @@
 
 # agridata
-![R-CMD-check](https://github.com/byzheng/agridata/workflows/R-CMD-check/badge.svg)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/agridata)](https://cran.r-project.org/package=agridata)
+[![R-CMD-check.yaml](https://github.com/byzheng/agridata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/byzheng/agridata/actions/workflows/R-CMD-check.yaml)
 
 [![](http://cranlogs.r-pkg.org/badges/grand-total/agridata?color=green)](https://cran.r-project.org/package=agridata)
 [![](http://cranlogs.r-pkg.org/badges/last-month/agridata?color=green)](https://cran.r-project.org/package=agridata)
