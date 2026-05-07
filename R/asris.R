@@ -16,6 +16,7 @@ asris_soil <- function(lon, lat, outfile, models = NULL) {
 
     writeLines(response, outfile)
     if (!is.null(models)) {
+        stopifnot(is.character(models), length(models) == 1, file.exists(models))
         cmd <- paste0(models, " ", outfile, " --upgrade")
         system(cmd)
     }
