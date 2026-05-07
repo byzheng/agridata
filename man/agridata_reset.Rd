@@ -2,7 +2,7 @@
 % Please edit documentation in R/options.R
 \name{agridata_reset}
 \alias{agridata_reset}
-\title{Reset global options for ragridata}
+\title{Reset global options for agridata}
 \usage{
 agridata_reset()
 }
@@ -10,7 +10,7 @@ agridata_reset()
 the default options
 }
 \description{
-Reset global options for ragridata
+Reset global options for agridata
 }
 \examples{
 agridata_reset()

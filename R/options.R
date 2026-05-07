@@ -4,7 +4,7 @@ AGRIDATA_OPTIONS <- settings::options_manager(
 )
 
 
-#' Set or get options for ragridata
+#' Set or get options for agridata
 #'
 #' @param ... Option names to retrieve option values or \code{[key]=[value]} pairs to set options.
 #'
@@ -21,7 +21,7 @@ agridata_options <- function(...){
     AGRIDATA_OPTIONS(...)
 }
 
-#' Reset global options for ragridata
+#' Reset global options for agridata
 #'
 #' @return the default options
 #' @export

@@ -1,22 +1,22 @@
-Package: ragridata
+Package: agridata
 Type: Package
 Title: R Interface to access datasets related with agriculture
-Version: 0.0.1
+Version: 0.0.2
 Author: Bangyou Zheng
 Maintainer: Bangyou Zheng <Bangyou.Zheng@csiro.au>
-Description: It is challenge to access datasets from multiple resources. ragridata provides an unique interface to access datasets.
+Description: It is challenge to access datasets from multiple resources. agridata provides an unique interface to access datasets.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:
     R (>= 4.1.0)
-URL: https://ragridata.bangyou.me/, https://github.com/byzheng/ragridata
-BugReports: https://github.com/byzheng/ragridata/issues
+URL: https://agridata.bangyou.me/, https://github.com/byzheng/agridata
+BugReports: https://github.com/byzheng/agridata/issues
 Imports:
    settings,
    httr2,
    httr
-RoxygenNote: 7.3.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Config/roxygen2/version: 8.0.0

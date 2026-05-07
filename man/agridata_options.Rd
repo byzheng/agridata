@@ -2,7 +2,7 @@
 % Please edit documentation in R/options.R
 \name{agridata_options}
 \alias{agridata_options}
-\title{Set or get options for ragridata}
+\title{Set or get options for agridata}
 \usage{
 agridata_options(...)
 }
@@ -13,7 +13,7 @@ agridata_options(...)
 the default and modified options.
 }
 \description{
-Set or get options for ragridata
+Set or get options for agridata
 }
 \section{Supported options}{
 

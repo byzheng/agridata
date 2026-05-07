@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(ragridata)
+library(agridata)
 
-test_check("ragridata")
+test_check("agridata")
