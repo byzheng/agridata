@@ -4,7 +4,7 @@
 \alias{asris_soil}
 \title{Download soil file from asris and convert to json which can be used in APSIM NG}
 \usage{
-asris_soil(lon, lat, outfile, models)
+asris_soil(lon, lat, outfile, models = NULL)
 }
 \arguments{
 \item{lon}{longitude}
@@ -13,7 +13,7 @@ asris_soil(lon, lat, outfile, models)
 
 \item{outfile}{output file}
 
-\item{models}{path to models}
+\item{models}{path to models. not required, if provided, the soil file will be upgraded to the latest version of APSIM NG.}
 }
 \value{
 No return values

@@ -3,11 +3,11 @@
 #' @param lon longitude
 #' @param lat latitude
 #' @param outfile output file
-#' @param models path to models
+#' @param models path to models. not required, if provided, the soil file will be upgraded to the latest version of APSIM NG.
 #'
 #' @return No return values
 #' @export
-asris_soil <- function(lon, lat, outfile, models) {
+asris_soil <- function(lon, lat, outfile, models = NULL) {
     servicePath = "https://www.asris.csiro.au/"
     soilURL = paste0(servicePath, 'ASRISApi/api/APSIM/getApsoil?longitude=', lon, '&latitude=', lat)
     message("Get Soil profile with ", soilURL)
@@ -15,7 +15,9 @@ asris_soil <- function(lon, lat, outfile, models) {
     response <- httr::content(soildata, "text")
 
     writeLines(response, outfile)
-    cmd <- paste0(models, " ", outfile, " --upgrade")
-    system(cmd)
+    if (!is.null(models)) {
+        cmd <- paste0(models, " ", outfile, " --upgrade")
+        system(cmd)
+    }
     return(invisible())
 }
