@@ -9,13 +9,13 @@
 Source:
 [`DESCRIPTION`](https://github.com/byzheng/agridata/blob/main/DESCRIPTION)
 
-Zheng B (2026). *agridata: R Interface to access datasets related with
-agriculture*. R package version 0.0.2, <https://agridata.bangyou.me/>.
+Zheng B (2026). *agridata: Unified Access to Agricultural Datasets*. R
+package version 0.1.2, <https://agridata.bangyou.me/>.
 
     @Manual{,
-      title = {agridata: R Interface to access datasets related with agriculture},
+      title = {agridata: Unified Access to Agricultural Datasets},
       author = {Bangyou Zheng},
       year = {2026},
-      note = {R package version 0.0.2},
+      note = {R package version 0.1.2},
       url = {https://agridata.bangyou.me/},
     }
